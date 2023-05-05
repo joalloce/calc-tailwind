@@ -1,5 +1,5 @@
 # calc-tailwind
 
-A simple and functional calculator using TailwindCSS and some JavaScript. Maybe Light and Dark Mode. Tooltips.
+A simple and functional calculator using TailwindCSS and some JavaScript. Maybe Light and Dark Mode.
 
-***wip***
+**_wip_**
