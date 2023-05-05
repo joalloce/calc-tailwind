@@ -4,20 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../dist/output.css" />
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <title>Calc</title>
   </head>
   <body>
     <div
-      class="bg-zinc-800 flex justify-center select-none items-center min-h-screen min-w-max"
+      id="root"
+      class="bg-zinc-800 text-black flex justify-center select-none items-center min-h-screen min-w-max"
     >
       <div class="w-full max-w-xs px-4 md:px-0">
         <div class="flex flex-col items-center gap-2 font-bold">
           <!-- Display -->
           <div
+            id="display"
             class="w-full h-32 bg-zinc-100 rounded-sm flex flex-col justify-evenly items-end pr-2"
           >
-            <div id="error" class="py-1 text-xs">
-              Maybe the light and dark mode
+            <div class="py-1">
+              <div id="dark-mode">
+                <iconify-icon icon="material-symbols:dark-mode"></iconify-icon>
+              </div>
+              <div id="light-mode" class="hidden">
+                <iconify-icon icon="material-symbols:light-mode"></iconify-icon>
+              </div>
+            </div>
+            <div id="error" class="py-1 text-xs text-red-600">
+              <br />
             </div>
             <div id="input" class="text-3xl font-semibold"></div>
 
@@ -28,6 +39,7 @@
             <div class="grid grid-cols-4 text-3xl">
               <!-- Digits -->
               <div
+                id="digits"
                 class="bg-zinc-200 col-span-3 grid grid-cols-3 gap-0 [&>*]:py-5 [&>*]:px-2.5 [&>*:hover]:text-zinc-300 [&>*:hover]:bg-zinc-700 [&>*:active]:scale-95"
               >
                 <button id="clear">C</button>
@@ -49,6 +61,7 @@
 
               <!-- Operations -->
               <div
+                id="operations"
                 class="bg-zinc-300 col-span-1 grid grid-cols-1 gap-0 [&>*]:py-5 [&>*]:px-2.5 [&>*:hover]:text-zinc-300 [&>*:hover]:bg-zinc-700 [&>*:active]:scale-95"
               >
                 <button data-operation="/">÷</button>
